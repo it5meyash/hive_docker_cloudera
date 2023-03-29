@@ -1,0 +1,58 @@
+docker start container_name
+docker exec -it ac88 /bin/bash
+
+create database db;
+use db;
+
+create table department_data                                                                                                            
+    (                                                                                                                                       
+    dept_id int,                                                                                                                            
+    dept_name string,                                                                                                                       
+    manager_id int,                                                                                                                         
+    salary int)                                                                                                                             
+    row format delimited                                                                                                                    
+    fields terminated by ','; 
+    
+describe department_data;
+
+# Shows as all file details of file where it is stored in hdfs location
+describe formatted department_data;
+
+# To see the location of file you created on hive in hdfs
+hdfs dfs -ls /user/hive/file_name 
+
+#changes in file making using vi editor
+esc + wq! (to exit and save)
+
+# For data load from local
+load data local inpath 'file:///tmp/hive_class/depart_data.csv' into table department_data; 
+    ---create directory and add file in tmp folder---
+    ---we can copy our data from a file location to tmp folder using 
+       cp "file location" "tmp location in which folder"---
+       
+# Display column name
+set hive.cli.print.header = true;
+
+# Load data from hdfs location
+     ---first make directory using hdfs dfs -mkdir location+file_name(prefer in tmp location)---
+     ---now put data from local to hdfs using hdfs fs -put /from where you're copying /where to copy---
+load data inpath '/tmp/hive_data_class_2/' into table department_data_from_hdfs;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
