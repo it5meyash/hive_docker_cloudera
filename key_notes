@@ -1,0 +1,1 @@
+1) load from hdfs to managed tables in that case data from the source table will be removed.
