@@ -38,7 +38,32 @@ set hive.cli.print.header = true;
      ---now put data from local to hdfs using hdfs fs -put /from where you're copying /where to copy---
 load data inpath '/tmp/hive_data_class_2/' into table department_data_from_hdfs;
 
+# Create external table 
 
+create external table department_data_external                                                                                          
+    > (                                                                                                                                       
+    > dept_id int,                                                                                                                            
+    > dept_name string,                                                                                                                       
+    > manager_id int,                                                                                                                         
+    > salary int                                                                                                                              
+    > )                                                                                                                                       
+    > row format delimited                                                                                                                    
+    > fields terminated by ','                                                                                                                
+    > location '/tmp/hive_data_class_2/'; 
+
+# work with Array data types
+
+create table employee                                                                                                                   
+    > (                                                                                                                                       
+    > id int,                                                                                                                                 
+    > name string,                                                                                                                            
+    > skills array<string>                                                                                                                    
+    > )                                                                                                                                       
+    > row format delimited                                                                                                                    
+    > fields terminated by ','                                                                                                                
+    > collection items terminated by ':';                                                                                                     
+
+load data local inpath 'file:///tmp/hive_class/array_data.csv' into table employee; 
 
 
 
