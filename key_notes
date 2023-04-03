@@ -2,4 +2,4 @@
 2) the main differences between internal and external tables in Hive are:
   Internal tables manage their own data in a Hive-managed directory, while external tables point to data that is already stored outside of Hive.
   Dropping an internal table deletes the table's metadata and its data, while dropping an external table only deletes the metadata object, leaving the data in place.
-  
+3) orc file format perform better with hive and parque file perform better with spark.
