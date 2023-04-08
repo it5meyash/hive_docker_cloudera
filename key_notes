@@ -3,4 +3,5 @@
   Internal tables manage their own data in a Hive-managed directory, while external tables point to data that is already stored outside of Hive.
   Dropping an internal table deletes the table's metadata and its data, while dropping an external table only deletes the metadata object, leaving the data in place.
 3) orc file format perform better with hive and parque file perform better with spark.
-  
+4) Serialization and Deserialization: Serialization is the process of converting an object into a series of bytes, which can then be transmitted over a network or stored in a file.
+   Deserialization is the reverse process of serialization, which involves taking the serialized data and converting it back into an object that can be used by a program.
