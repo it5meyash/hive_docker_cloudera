@@ -1,3 +1,4 @@
+https://medium.com/@rakeshgopidi/installing-cloudera-quickstart-vm-through-docker-hub-on-mac-m1-879f4a3d0fd4
 docker start container_name
 docker exec -it ac88 /bin/bash
 
