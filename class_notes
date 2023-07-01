@@ -3,6 +3,8 @@ docker start container_name
 docker exec -it ac88 /bin/bash
 sudo service hue status
 
+!clear; --for clearing console output
+
 create database db;
 use db;
 
