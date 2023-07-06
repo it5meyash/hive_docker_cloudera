@@ -5,3 +5,5 @@
 3) orc file format perform better with hive and parque file perform better with spark.
 4) Serialization and Deserialization: Serialization is the process of converting an object into a series of bytes, which can then be transmitted over a network or stored in a file.
    Deserialization is the reverse process of serialization, which involves taking the serialized data and converting it back into an object that can be used by a program.
+5) To copy a file from a local system to a remote system:
+   ----- scp /path/to/local_file username@remote_host:/path/to/destination
